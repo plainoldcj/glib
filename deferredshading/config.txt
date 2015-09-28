@@ -1,0 +1,12 @@
+// deferred shadig
+// config.txt
+
+debug = 0
+printinfo = 1
+
+fsquadmode = vbo
+
+width = 1024
+height = 1024
+
+numlights = 20

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="common.h" />
+    <ClInclude Include="singleton.h">
+      <Filter>Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="uncopyable.h">
+      <Filter>Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="math3d.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="quaternion.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="vector.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="bbox.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="pointer_old.h">
+      <Filter>Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="pointer.h">
+      <Filter>Generic</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="common.cpp" />
+    <ClCompile Include="math3d.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="config.cpp">
+      <Filter>Config</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Generic">
+      <UniqueIdentifier>{5d582f9e-5f1b-4d04-a4d8-62f348608fcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Math">
+      <UniqueIdentifier>{f0877836-96e1-4e4b-aa47-93d8d186f4fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{7c20276f-80bf-4fc3-8971-0dba11d17dbc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

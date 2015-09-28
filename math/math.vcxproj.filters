@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="math.h" />
+    <ClInclude Include="vector3.h">
+      <Filter>Vector3</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix4.h">
+      <Filter>Matrix4</Filter>
+    </ClInclude>
+    <ClInclude Include="math_inl.h" />
+    <ClInclude Include="vector3_mem_inl.h">
+      <Filter>Vector3</Filter>
+    </ClInclude>
+    <ClInclude Include="vector3_op_inl.h">
+      <Filter>Vector3</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix3.h">
+      <Filter>Matrix3</Filter>
+    </ClInclude>
+    <ClInclude Include="ray.h">
+      <Filter>Primitives\Ray</Filter>
+    </ClInclude>
+    <ClInclude Include="sphere.h">
+      <Filter>Primitives\Sphere</Filter>
+    </ClInclude>
+    <ClInclude Include="intersections.h">
+      <Filter>Primitives\Intersections</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Vector3">
+      <UniqueIdentifier>{bcecc129-204d-4a67-86ae-b29a52ed9b16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Matrix4">
+      <UniqueIdentifier>{a4fc680e-7488-4efa-b384-823977250c4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Matrix3">
+      <UniqueIdentifier>{34b841bf-14f9-4a4d-abe6-b86c88343d7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Primitives">
+      <UniqueIdentifier>{9beb35fc-5d22-4297-b978-e948719243c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Primitives\Sphere">
+      <UniqueIdentifier>{bbcdc136-438f-480a-b868-545f14fee40b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Primitives\Ray">
+      <UniqueIdentifier>{0623870f-603a-4659-a3c9-ad1a67b2d0bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Primitives\Intersections">
+      <UniqueIdentifier>{25720c8b-ca50-433a-924e-fb543cca207d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="vector3_op.cpp">
+      <Filter>Vector3</Filter>
+    </ClCompile>
+    <ClCompile Include="vector3_mem.cpp">
+      <Filter>Vector3</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix4_mem.cpp">
+      <Filter>Matrix4</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix4_op.cpp">
+      <Filter>Matrix4</Filter>
+    </ClCompile>
+    <ClCompile Include="math.cpp" />
+    <ClCompile Include="matrix3_mem.cpp">
+      <Filter>Matrix3</Filter>
+    </ClCompile>
+    <ClCompile Include="matrix3_op.cpp">
+      <Filter>Matrix3</Filter>
+    </ClCompile>
+    <ClCompile Include="is_ray_sphere.cpp">
+      <Filter>Primitives\Intersections</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

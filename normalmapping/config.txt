@@ -1,0 +1,5 @@
+// config file, yeah
+this is invalid
+invalid
+
+	debug 	=   1

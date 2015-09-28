@@ -1,0 +1,29 @@
+// vertexshader
+
+uniform vec3 lightPos;
+uniform vec3 viewDir;
+attribute vec3 tangent;
+attribute vec3 bitangent;
+
+varying vec3 vLightDir;
+varying vec3 vSpecDir;
+
+void main() {
+	gl_FrontColor = gl_Color;
+	gl_TexCoord[0] = gl_MultiTexCoord0;
+
+	vec3 normal = gl_Normal;
+
+	vLightDir = lightPos - gl_Vertex.xyz;
+	vSpecDir = vLightDir + viewDir;
+	
+	vLightDir = tangent * vLightDir.x
+		+ bitangent * vLightDir.y
+		+ normal * vLightDir.z;
+
+	vSpecDir = tangent * vSpecDir.x
+		+ bitangent * vSpecDir.y
+		+ normal * vSpecDir.z;
+		
+	gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+}

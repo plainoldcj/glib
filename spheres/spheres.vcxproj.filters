@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="window.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="sphere.cpp">
+      <Filter>Entities\Sphere</Filter>
+    </ClCompile>
+    <ClCompile Include="plane.cpp">
+      <Filter>Entities\Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="camera.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Window">
+      <UniqueIdentifier>{aa01faa1-6478-44ca-83df-22d6a6073584}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities">
+      <UniqueIdentifier>{815f3f82-70f3-44ff-b872-aed922eeb5e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Sphere">
+      <UniqueIdentifier>{e8b7e51a-b209-40c0-9968-469c4baef19c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entities\Plane">
+      <UniqueIdentifier>{4c3c0b58-7d32-43c7-aa0e-f11c84a1c828}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{dec67fb4-3d66-475b-b366-044d00ef8807}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="window.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="sphere.h">
+      <Filter>Entities\Sphere</Filter>
+    </ClInclude>
+    <ClInclude Include="entity.h">
+      <Filter>Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="plane.h">
+      <Filter>Entities\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

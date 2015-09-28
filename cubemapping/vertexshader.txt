@@ -1,0 +1,24 @@
+attribute vec3 invTangent;
+attribute vec3 invBitangent;
+attribute vec3 invNormal;
+
+uniform mat4 normalMat;
+uniform vec3 view;
+
+varying vec3 vInvTangent;
+varying vec3 vInvBitangent;
+varying vec3 vInvNormal;
+varying mat4 vNormalMat;
+varying vec3 vView;
+
+void main() {
+	vInvTangent = invTangent;
+	vInvBitangent = invBitangent;
+	vInvNormal = invNormal;
+
+	vNormalMat = normalMat;
+	vView = view;
+
+	gl_TexCoord[0] = gl_MultiTexCoord0;
+	gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+}

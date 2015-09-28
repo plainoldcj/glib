@@ -1,0 +1,61 @@
+uniform sampler2D texNormal;
+
+uniform sampler2D texCubePosX;
+uniform sampler2D texCubePosY;
+uniform sampler2D texCubePosZ;
+uniform sampler2D texCubeNegX;
+uniform sampler2D texCubeNegY;
+uniform sampler2D texCubeNegZ;
+
+varying vec3 vInvTangent;
+varying vec3 vInvBitangent;
+varying vec3 vInvNormal;
+varying mat4 vNormalMat;
+varying vec3 vView;
+
+vec2 texCoord(float x, float y) {
+	return 0.5 * vec2(x, y) + vec2(0.5, 0.5);
+}
+
+vec4 textureCubeMap(vec3 v) {
+	float ax = abs(v.x);
+	float ay = abs(v.y);
+	float az = abs(v.z);
+
+	if(ax > ay) {
+		if(ax > az) {
+			if(v.x > 0) {
+				return texture2D(texCubePosX, texCoord(v.z, v.y));
+			} else {
+				return texture2D(texCubeNegX, texCoord(-v.z, v.y));
+			}
+		}
+	} else {
+		if(ay > az) {
+			if(v.y > 0) {
+				return texture2D(texCubePosY, texCoord(v.x, v.z));
+			} else {
+				return texture2D(texCubeNegY, texCoord(-v.x, -v.z));
+			}	
+		}
+	}
+	if(v.z > 0) {
+		return texture2D(texCubePosZ, texCoord(-v.x, v.y));
+	} else {
+		return texture2D(texCubeNegZ, texCoord(v.x, v.y));
+	}
+}
+
+void main() {
+	vec3 n = texture2D(texNormal, gl_TexCoord[0].xy);
+	n = vInvTangent * n.x
+	  + vInvBitangent * n.y
+	  + vInvNormal * n.z;
+
+	n = vec3(vNormalMat * vec4(n, 1.0));
+	vec3 reflected = reflect(vView, normalize(n));
+
+	vec4 diff = textureCubeMap(normalize(reflected));
+
+	gl_FragColor = diff;
+}

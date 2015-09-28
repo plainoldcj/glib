@@ -1,0 +1,3 @@
+Config::Config: malformed syntax in line "this is invalid ". expected "name = value"
+Config::Config: too few arguments in line "invalid "
+Dump::Dump: debug mode enabled, will read files from disk

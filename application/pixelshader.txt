@@ -1,0 +1,9 @@
+// pixelshader
+
+uniform sampler2D uniTexDiffuse;
+
+void main() {
+	vec4 diffuse = texture2D(uniTexDiffuse, gl_TexCoord[0]);
+
+	gl_FragColor = diffuse;
+}

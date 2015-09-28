@@ -1,0 +1,23 @@
+// vs_deferred0.txt
+// author: cj
+
+attribute vec3 attToObjectA0;
+attribute vec3 attToObjectA1;
+attribute vec3 attNormal;
+
+varying vec3 varPosition;
+varying vec3 varToObjectA0;
+varying vec3 varToObjectA1;
+varying vec3 varNormal;
+
+void main() {
+	gl_TexCoord[0] = gl_MultiTexCoord0;
+
+	varToObjectA0 = attToObjectA0;
+	varToObjectA1 = attToObjectA1;
+	varNormal = attNormal;
+
+	vec4 pos = gl_ModelViewMatrix * gl_Vertex;
+	gl_Position = gl_ProjectionMatrix * pos;
+	varPosition = pos.xyz;
+}

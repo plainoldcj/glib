@@ -1,0 +1,26 @@
+// ps_deferred0.txt
+// author: cj
+
+uniform sampler2D uniTexDiffuse;
+uniform sampler2D uniTexNormal;
+uniform mat3 uniNormalMat;
+
+varying vec3 varPosition;
+varying vec3 varToObjectA0;
+varying vec3 varToObjectA1;
+varying vec3 varNormal;
+
+void main() {
+	vec3 diff = texture2D(uniTexDiffuse, gl_TexCoord[0].xy).xyz;
+	vec3 perpn = texture2D(uniTexNormal, gl_TexCoord[0].xy).xyz;
+	perpn = 2.0 * perpn - vec3(1.0, 1.0, 1.0);
+
+	perpn = varToObjectA0 * perpn.x
+		+ varToObjectA1 * perpn.y
+		+ varNormal * perpn.z;
+	perpn = uniNormalMat * perpn;
+
+	gl_FragData[0] = vec4(varPosition, 0.0);
+	gl_FragData[1] = vec4(perpn, 0.0);
+	gl_FragData[2] = vec4(diff, 1.0);
+}

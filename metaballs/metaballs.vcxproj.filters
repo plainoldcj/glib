@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Metaballs">
+      <UniqueIdentifier>{e304d0eb-5857-4187-bef9-2fddb7073dce}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="metaballs.h">
+      <Filter>Metaballs</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

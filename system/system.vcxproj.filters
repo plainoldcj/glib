@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="opengl.h">
+      <Filter>OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="window.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="loop.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="glext.h">
+      <Filter>OpenGL\Extern</Filter>
+    </ClInclude>
+    <ClInclude Include="extensions.h">
+      <Filter>OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="glwindow.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="glx.h">
+      <Filter>OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="print.h">
+      <Filter>OpenGL</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="opengl.cpp">
+      <Filter>OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="window.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="timer.cpp">
+      <Filter>Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="extensions.cpp">
+      <Filter>OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="glwindow.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="print.cpp">
+      <Filter>OpenGL</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Window">
+      <UniqueIdentifier>{2cc96ec2-9a46-40d8-9b92-f8f50e60f80b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Timer">
+      <UniqueIdentifier>{5a12c880-4c6f-4f07-a2d4-13222f38737c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenGL">
+      <UniqueIdentifier>{f0d52da5-f1bc-4f42-ba4c-c499cb483723}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OpenGL\Extern">
+      <UniqueIdentifier>{a03c4271-9d61-4f36-a76f-e9b1ba1e568b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

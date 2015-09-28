@@ -1,0 +1,32 @@
+// pixelshader
+
+uniform sampler2D uniTexDiffuse;
+uniform sampler2D uniTexNormal;
+uniform sampler2D uniTexAdd;
+uniform sampler2D uniTexSpec;
+
+varying vec3 vLightDir;
+varying vec3 vSpecDir;
+
+void main() {
+	vec4 diff = texture2D(uniTexDiffuse, gl_TexCoord[0].xy);
+	vec4 addTerm = texture2D(uniTexAdd, gl_TexCoord[0].xy);
+	vec4 spec = texture2D(uniTexSpec, gl_TexCoord[0].xy);
+	vec3 perpn = texture2D(uniTexNormal, gl_TexCoord[0].xy).xyz;
+	perpn = 2.0 * perpn - vec3(1.0, 1.0, 1.0);
+
+	float d = clamp(dot(perpn, normalize(vLightDir)), 0, 1);
+	
+	vec4 specTerm = vec4(0.0f, 0.0f, 0.0f, 0.0f);
+	if(0.0 < d) {
+		vec3 specDir = normalize(vSpecDir);
+		specTerm = pow(clamp(dot(specDir, perpn), 0, 1), 10) * spec;
+	}
+
+	vec4 diffTerm = diff * d * gl_Color;
+
+	gl_FragData[0] = diff;
+	gl_FragData[1] = vec4(1.0f, 1.0f, 1.0f, 1.0f) * d;
+	gl_FragData[2] = addTerm + specTerm;
+	gl_FragData[3] = diffTerm + specTerm + addTerm;
+}

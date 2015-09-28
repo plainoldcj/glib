@@ -1,0 +1,37 @@
+// ps_pointlight.txt
+// author: cj
+
+uniform sampler2D uniTexPosition;
+uniform sampler2D uniTexNormal;
+uniform sampler2D uniTexDiffuse;
+
+uniform vec3 uniLightPos;
+uniform vec4 uniLightDiffuseCol;
+
+uniform float uniLightConstantAtt;
+uniform float uniLightLinearAtt;
+uniform float uniLightQuadricAtt;
+
+float att(float d) {
+	float div =
+	  uniLightConstantAtt
+	+ uniLightLinearAtt * d
+	+ uniLightQuadricAtt * d * d;
+	
+	return 1.0 / div;
+}
+
+void main() {
+	vec2 texCoord = gl_TexCoord[0].xy;
+	vec3 fragPos = texture2D(uniTexPosition, texCoord).xyz;
+	vec3 fragNormal = texture2D(uniTexNormal, texCoord).xyz;
+	vec3 fragDiffuse = texture2D(uniTexDiffuse, texCoord).xyz;
+
+	vec3 t = uniLightPos - fragPos;
+	vec3 dir = normalize(t);
+	float d = clamp(dot(dir, normalize(fragNormal)), 0.0, 1.0);
+
+	vec4 diff = vec4(fragDiffuse, 1.0) * uniLightDiffuseCol * d;
+
+	gl_FragColor = att(length(t)) * diff;
+}

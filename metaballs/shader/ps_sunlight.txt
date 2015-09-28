@@ -1,0 +1,22 @@
+// ps_sunlight.txt
+// author: cj
+
+uniform sampler2D uniTexPosition;
+uniform sampler2D uniTexNormal;
+uniform sampler2D uniTexDiffuse;
+
+uniform vec3 uniLightDir;
+uniform vec4 uniLightDiffuseCol;
+
+void main() {
+	vec2 texCoord = gl_TexCoord[0].xy;
+	vec3 fragPosition = texture2D(uniTexPosition, texCoord).xyz;
+	vec3 fragNormal = texture2D(uniTexNormal, texCoord).xyz;
+	vec3 fragDiffuse = texture2D(uniTexDiffuse, texCoord).xyz;
+
+	fragDiffuse = fragDiffuse + fragPosition - fragPosition;
+
+	float d = clamp(dot(uniLightDir, normalize(fragNormal)), 0.0, 1.0);
+
+	gl_FragColor = vec4(fragDiffuse, 1.0) * uniLightDiffuseCol * d;
+}

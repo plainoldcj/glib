@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="World">
+      <UniqueIdentifier>{efa30d4c-084e-415e-81c3-08a9a42a0d89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Mesh">
+      <UniqueIdentifier>{c059d312-90dd-4c87-af49-4032e6c9d30e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Skin">
+      <UniqueIdentifier>{a603efe5-fac6-46b3-9d48-8f1c77076d85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Essential">
+      <UniqueIdentifier>{b334c4c6-534e-4d5c-80ea-3d9582703a4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Essential\Lights">
+      <UniqueIdentifier>{b34698fa-3fa6-4d78-b7e4-f7b9d5f5fbfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Essential\Models">
+      <UniqueIdentifier>{be38e29c-f7fc-4450-b352-cc049170978c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Essential\Framebuffer">
+      <UniqueIdentifier>{13bf3a3e-65f3-483f-920b-f8a94a367d9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Essential\Shaders">
+      <UniqueIdentifier>{f7429120-b672-4db7-869b-47041277d0d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Essential\Textures">
+      <UniqueIdentifier>{0a3d3090-fbf3-489e-86e7-be5e93f3a5d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Essential\Textures\Allocators">
+      <UniqueIdentifier>{6662d444-6c5b-469d-accb-1204ad3d6fab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{b300ddb2-e953-4d6a-8649-d4836ec3b415}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\FSQuad">
+      <UniqueIdentifier>{d0331b83-4614-439b-b382-847f2bc0da49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Primitives">
+      <UniqueIdentifier>{524892e5-c30e-4549-8d6b-2ae2d63c6d28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Effects">
+      <UniqueIdentifier>{8e201842-e3fe-4648-96f1-c2c1eeb1c7b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Effects\Pointlights">
+      <UniqueIdentifier>{5ee48548-17b9-4ab1-b0be-5f3412e3c779}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="World\Effects\Sunlight">
+      <UniqueIdentifier>{691df978-6f56-420c-8f49-f48af1176c24}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="texture.h">
+      <Filter>Essential\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="texallocs.h">
+      <Filter>Essential\Textures\Allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="shader.h">
+      <Filter>Essential\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="program.h">
+      <Filter>Essential\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="model.h">
+      <Filter>Essential\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="framebuffer.h">
+      <Filter>Essential\Framebuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="renderbuffer.h">
+      <Filter>Essential\Framebuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="world.h">
+      <Filter>World</Filter>
+    </ClInclude>
+    <ClInclude Include="quad.h">
+      <Filter>World\Primitives</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh.h">
+      <Filter>World\Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="skin.h">
+      <Filter>World\Skin</Filter>
+    </ClInclude>
+    <ClInclude Include="wiki.h" />
+    <ClInclude Include="light.h">
+      <Filter>Essential\Lights</Filter>
+    </ClInclude>
+    <ClInclude Include="camera.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="color.h">
+      <Filter>Essential</Filter>
+    </ClInclude>
+    <ClInclude Include="fsquad.h">
+      <Filter>World\FSQuad</Filter>
+    </ClInclude>
+    <ClInclude Include="posteffect.h">
+      <Filter>World\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="pe_pointlights.h">
+      <Filter>World\Effects\Pointlights</Filter>
+    </ClInclude>
+    <ClInclude Include="pe_sunlight.h">
+      <Filter>World\Effects\Sunlight</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="texture.cpp">
+      <Filter>Essential\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="tga_texalloc.cpp">
+      <Filter>Essential\Textures\Allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="shader.cpp">
+      <Filter>Essential\Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="program.cpp">
+      <Filter>Essential\Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="model.cpp">
+      <Filter>Essential\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="framebuffer.cpp">
+      <Filter>Essential\Framebuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="renderbuffer.cpp">
+      <Filter>Essential\Framebuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="quad.cpp">
+      <Filter>World\Primitives</Filter>
+    </ClCompile>
+    <ClCompile Include="world.cpp">
+      <Filter>World</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh.cpp">
+      <Filter>World\Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="skin.cpp">
+      <Filter>World\Skin</Filter>
+    </ClCompile>
+    <ClCompile Include="camera.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="light.cpp">
+      <Filter>Essential\Lights</Filter>
+    </ClCompile>
+    <ClCompile Include="fsquad.cpp">
+      <Filter>World\FSQuad</Filter>
+    </ClCompile>
+    <ClCompile Include="pe_pointlights.cpp">
+      <Filter>World\Effects\Pointlights</Filter>
+    </ClCompile>
+    <ClCompile Include="pe_sunlight.cpp">
+      <Filter>World\Effects\Sunlight</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
